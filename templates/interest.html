@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Interest</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Select your Interest</h1>
+
+        <form action="/result" method="post">
+            <input type="hidden" name="region" value="{{ region }}">
+            <input type="hidden" name="state" value="{{ state }}">
+
+            <button type="submit" name="interest" value="Beaches">Beaches</button>
+            <button type="submit" name="interest" value="Mountains">Mountains</button>
+            <button type="submit" name="interest" value="Historical Places">Historical</button>
+            <button type="submit" name="interest" value="Nature Spots">Nature</button>
+            <button type="submit" name="interest" value="Adventure">Adventure</button>
+        </form>
+    </div>
+</body>
+</html>

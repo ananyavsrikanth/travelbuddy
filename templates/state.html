@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select State | Travel Buddy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Select a State 🌸</h1>
+        <p>You chose: <b>{{ region }}</b></p>
+
+        <form action="/interest" method="post">
+            {% for state in states %}
+                <button type="submit" name="state" value="{{ state }}" class="btn">{{ state }}</button>
+            {% endfor %}
+        </form>
+
+        <a href="/region" class="back-link">← Go Back</a>
+
+    </div>
+
+</body>
+</html>
